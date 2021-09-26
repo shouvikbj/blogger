@@ -40,6 +40,10 @@ const Navbar = () => {
     Router.push("/my-posts");
   };
 
+  const navigateToAddPage = () => {
+    Router.push("/add");
+  };
+
   const handleSignin = () => {
     var firebaseConfig = {
       apiKey: "AIzaSyC9vtOyHhZmP2rD2_SoAez0_m5qqGxi8mE",
@@ -145,6 +149,15 @@ const Navbar = () => {
                 </MenuItem>
                 <MenuItem onClick={() => {}}>
                   <Chip label={auth.email} color="primary" variant="outlined" />
+                </MenuItem>
+                <Divider />
+                <MenuItem
+                  onClick={() => {
+                    navigateToAddPage();
+                    handleClose();
+                  }}
+                >
+                  Create New
                 </MenuItem>
                 <Divider />
                 <MenuItem
