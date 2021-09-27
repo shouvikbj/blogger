@@ -14,7 +14,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { v4 as uuidv4 } from "uuid";
 
-const add = () => {
+const Add = () => {
   const [auth, setAuth] = useContext(AuthContext);
   const [posts, setPosts] = useContext(PostContext);
 
@@ -187,4 +187,4 @@ const add = () => {
   );
 };
 
-export default add;
+export default Add;
