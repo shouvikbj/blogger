@@ -50,7 +50,7 @@ const Home = () => {
         setPosts([]);
       }
     });
-  }, []);
+  });
 
   return (
     <div>

@@ -105,7 +105,7 @@ const Navbar = () => {
 
   useEffect(() => {
     checkAuth();
-  }, []);
+  });
 
   return (
     <Box sx={{ flexGrow: 1 }}>
