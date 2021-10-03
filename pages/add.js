@@ -22,6 +22,18 @@ const Add = () => {
   const [story, setStory] = useState("");
   const [privacy, setPrivacy] = useState("");
 
+  const handleBlogType = (e) => {
+    setBlogType(e.target.value);
+  };
+
+  const handleStory = (e) => {
+    setStory(e.target.value);
+  };
+
+  const handlePrivacy = (e) => {
+    setPrivacy(e.target.value);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (auth) {
@@ -102,9 +114,7 @@ const Add = () => {
                   aria-label="Default select example"
                   style={{ backgroundColor: "transparent" }}
                   name="blogType"
-                  onChange={(e) => {
-                    setBlogType(e.target.value);
-                  }}
+                  onChange={handleBlogType}
                 >
                   <option className="text-black" selected value="">
                     Select
@@ -136,9 +146,7 @@ const Add = () => {
                   style={{ backgroundColor: "transparent" }}
                   placeholder="start typing..."
                   name="story"
-                  onChange={(e) => {
-                    setStory(e.target.value);
-                  }}
+                  onChange={handleStory}
                 ></textarea>
               </div>
               <div className="mb-3">
@@ -150,9 +158,7 @@ const Add = () => {
                   aria-label="Default select example"
                   style={{ backgroundColor: "transparent" }}
                   name="privacy"
-                  onChange={(e) => {
-                    setPrivacy(e.target.value);
-                  }}
+                  onChange={handlePrivacy}
                 >
                   <option className="text-black" selected value="">
                     Select
